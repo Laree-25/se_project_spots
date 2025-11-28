@@ -2,7 +2,7 @@
 
 This is a photo sharing site. Users are able to like photos others post. The cite is compatable for 300px-1440px. the like and new posts buttons have hover effects to be more visually appealing and accesable for users.
 
-- https://www.loom.com/share/e047ac48449e41dc9a9dd0dc8b646a1c
+- https://laree-25.github.io/se_project_spots/
 
 ## Tech Stack
 
