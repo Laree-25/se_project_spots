@@ -1,0 +1,12 @@
+.footer {
+  margin: 60px 0 60px;
+  display: flex;
+  justify-content: center;
+  background-color: #fcf5e5;
+}
+
+.footer__copyright {
+  max-width: 1280px;
+  margin: 0 auto;
+  background-color: #fcf5e5;
+}
