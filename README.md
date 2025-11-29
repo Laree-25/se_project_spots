@@ -2,7 +2,9 @@
 
 This is a photo sharing site. Users are able to like photos others post. The cite is compatable for 300px-1440px. the like and new posts buttons have hover effects to be more visually appealing and accesable for users.
 
-- https://laree-25.github.io/se_project_spots/
+## Project Picth
+
+- https://drive.google.com/file/d/1TTlq_ZYQmkyjX2QpGuMVE29ljAOvMYIl/view?usp=sharing
 
 ## Tech Stack
 
