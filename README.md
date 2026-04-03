@@ -18,4 +18,4 @@ This is a photo sharing site. Users are able to like photos others post. The cit
 
 This webpage is deployed to GitHub Pages.
 
-- https://github.com/Laree-25/se_project_spots
+- https://laree-25.github.io/se_project_spots
