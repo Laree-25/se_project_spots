@@ -1,5 +1,9 @@
 const initialCards = [
   {
+    name: "Golden Gate Bridge",
+    Link: " https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/7-photo-by-griffin-wooldridge-from-pexels.jpg",
+  },
+  {
     name: "Val Thornes",
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/1-photo-by-moritz-feldmann-from-pexels.jpg",
   },
@@ -53,11 +57,19 @@ const cardsList = document.querySelector(".cards__list");
 function getCardElement(data) {
   const cardElement = cardTemplate.cloneNode(true);
   const cardTitleElement = cardElement.querySelector(".card__title");
-  const cardImageElement = cardElement.querySelector(".card__Image");
+  const cardImageElement = cardElement.querySelector(".card__image");
 
   cardImageElement.src = data.link;
   cardImageElement.alt = data.name;
   cardTitleElement.textContent = data.name;
+  const cardLikeBtnEl = cardElement.querySelector(".card__like-btn");
+  cardLikeBtnEl.addEventListener("click", () => {
+    cardLikeBtnEl.classList.toggle("card__like-btn_active");
+  });
+  const cardDeleteBtnEl = cardElement.querySelector(".card__delete-btn");
+  cardDeleteBtnEl.addEventListener("click", () => {
+    cardDeleteBtnEl.closest(".card").remove();
+  });
 
   return cardElement;
 }
@@ -95,9 +107,14 @@ editProfileForm.addEventListener("submit", handleProfileSubmit);
 
 function handleAddCardSubmit(evt) {
   evt.preventDefault();
-  console.log(cardCaptionInput.value);
-  console.log(cardImageInput.value);
+  const inputValues = {
+    name: cardCaptionInput.value,
+    Link: cardImageInput.value,
+  };
+  const cardElement = getCardElement(inputValues);
+  cardsList.prepend(cardElement);
   newPostFormEl.reset();
+
   closeModal(newPostModal);
 }
 newPostFormEl.addEventListener("submit", handleAddCardSubmit);
