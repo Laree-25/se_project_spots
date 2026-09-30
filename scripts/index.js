@@ -1,7 +1,7 @@
 const initialCards = [
   {
     name: "Golden Gate Bridge",
-    link: " https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/7-photo-by-griffin-wooldridge-from-pexels.jpg",
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/7-photo-by-griffin-wooldridge-from-pexels.jpg",
   },
   {
     name: "Val Thornes",
@@ -81,14 +81,13 @@ function getCardElement(data) {
     previewImageEl.alt = data.name;
     previewCaptionEl.textContent = data.name;
     openModal(previewModal);
-    previewModalCloseBtn.addEventListener("click", function () {
-      closeModal(previewModal);
-    });
   });
 
   return cardElement;
 }
-
+previewModalCloseBtn.addEventListener("click", function () {
+  closeModal(previewModal);
+});
 function openModal(modal) {
   modal.classList.add("modal_is-opened");
 }
@@ -124,7 +123,7 @@ function handleAddCardSubmit(evt) {
   evt.preventDefault();
   const inputValues = {
     name: cardCaptionInput.value,
-    Link: cardImageInput.value,
+    link: cardImageInput.value,
   };
   const cardElement = getCardElement(inputValues);
   cardsList.prepend(cardElement);
