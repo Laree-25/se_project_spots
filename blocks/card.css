@@ -13,9 +13,6 @@
   border-radius: 8px;
   cursor: pointer;
 }
-.card__image:hover {
-  opacity: 0.9;
-}
 
 .card__delete-btn {
   background-image: url(../images/Delete-Default.svg);
@@ -32,6 +29,7 @@
 .card__delete-btn:hover {
   background-image: url(../images/Delete-Hover.svg);
 }
+
 .card__content {
   display: flex;
   align-items: center;
